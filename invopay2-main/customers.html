@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoPay | العملاء</title>
+
+    <link rel="stylesheet" href="customers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">Invo<span>Pay</span></div>
+
+        <nav class="side-nav">
+            <a href="dashboard.html">الرئيسية</a>
+            <a href="invoices-list.html">فواتيري</a>
+            <a href="create-invoice.html">إنشاء فاتورة</a>
+            <a href="customers.html" class="active">العملاء</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <div class="customers-header">
+            <div>
+                <h1>👥 إدارة العملاء</h1>
+                <p>عرض وإدارة جميع العملاء المسجلين</p>
+            </div>
+
+            <!-- ADD CUSTOMER -->
+            <a href="add-customer.html">
+                <button class="add-customer-btn">
+                    <i class="fas fa-plus"></i> إضافة عميل
+                </button>
+            </a>
+        </div>
+
+        <!-- SEARCH -->
+        <form method="GET" action="">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input 
+                    type="text" 
+                    name="search" 
+                    placeholder="ابحث عن عميل..."
+                >
+            </div>
+        </form>
+
+        <!-- CUSTOMERS GRID -->
+        <div class="customers-grid">
+
+            <!-- CUSTOMER 1 -->
+            <div class="customer-card">
+
+                <h3>شركة الأمل</h3>
+                <p>📧 email@example.com</p>
+                <p>📞 01012345678</p>
+
+                <div class="card-actions">
+
+                    <!-- VIEW -->
+                    <a href="view-customer.html?id=1">
+                        <i class="fas fa-eye"></i>
+                    </a>
+
+                    <!-- EDIT -->
+                    <a href="edit-customer.html?id=1">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <!-- DELETE -->
+                    <form method="POST" action="" style="display:inline;">
+                        <input type="hidden" name="customer_id" value="1">
+                        <button type="submit" name="delete" style="background:none;border:none;">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- CUSTOMER 2 -->
+            <div class="customer-card">
+
+                <h3>شركة النور</h3>
+                <p>📧 nour@gmail.com</p>
+                <p>📞 01198765432</p>
+
+                <div class="card-actions">
+
+                    <a href="view-customer.html?id=2">
+                        <i class="fas fa-eye"></i>
+                    </a>
+
+                    <a href="edit-customer.html?id=2">
+                        <i class="fas fa-edit"></i>
+                    </a>
+
+                    <form method="POST" action="" style="display:inline;">
+                        <input type="hidden" name="customer_id" value="2">
+                        <button type="submit" name="delete" style="background:none;border:none;">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
